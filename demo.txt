@@ -1,0 +1,11 @@
+cmder命令:
+    进入文件目录: cd 文件名
+    创建文件夹: mkdir 文件名
+    清除当前页面: clear
+    显示当前所在文件: pwd
+    返回上一文件目录: cd ../
+
+git命令:
+    初始化当前文件夹为git版本控制目录 git init
+    查看当前git状态:git status
+    
