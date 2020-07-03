@@ -6,6 +6,34 @@ cmder命令:
     返回上一文件目录: cd ../
 
 git命令:
+  普通操作:
     初始化当前文件夹为git版本控制目录 git init
     查看当前git状态:git status
+    将新增/修改文件添加到git暂存区: git add 文件名.类型
+    将添加到暂存区的文件添加到git版本库: git commit -m "修改提示"
+    查看当前修改与上一次提交版本不同: git diff
+    查看当前版本与历史某版本不同: git diff 版本号
+    查看提交版本日志:git log  
+    指查看提交版本的版本号与修改提示: git log --pretty=oneline
+    删除指定文件:git rm 文件名  删除文件有两步操作:删除文件 add删除文件
+    
+  回滚操作:
+    版本回滚: git reset 版本号  (回滚后的状态与版本号状态相同)
+    版本回滚: git reset --hard 版本号 (建议使用这个)
+    查看版本滚回后的历史日志: git reflog
+    将已经add到暂缓区的文件挪出暂缓区:git reset HEAD 文件名  或是:git restore --staged 文件名
+    将已经挪出暂缓区的文件,撤销所有修改:git checkout -- 文件名  如果文件没有挪出暂缓区,又没有再次修改 该操作无效
+    在已经add到暂缓区的文件,又对该文件做了修改,撤销修改:git checkout -- 文件名
+  
+  分支管理:
+    新建分支:git branch 分支名
+    切换分支:git checkout 分支名
+    新建分支&切换分支同步操作:git checkout -b 新分支名
+    查看当前所有分支:git branch *表示当前所在分支
+    合并分支:git merge 分支名 (不能在当前分支上合并自身)
+    删除分支:git branch -d 分支名 (不能在当前分支上删除自身)
+
+  远程仓库管理:
+    建立连接: git remote add origin 连接地址
+    上传文件:git push -u origin master
     
