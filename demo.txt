@@ -32,8 +32,13 @@ git命令:
     查看当前所有分支:git branch *表示当前所在分支
     合并分支:git merge 分支名 (不能在当前分支上合并自身)
     删除分支:git branch -d 分支名 (不能在当前分支上删除自身)
+    将数据状态暂存:git stash 
+    查看暂存列表:git stash list
+    恢复暂存状态:git stash apply
+    删除暂存列表:git stash drop
 
   远程仓库管理:
     建立连接: git remote add origin 连接地址
     上传文件:git push -u origin master
+    克隆远程代码:git clone 地址
     
